@@ -18,7 +18,7 @@ public class PrefRewardedAd {
         this.mContext = context;
     }
 
-    public static void setCount(int value) {
+    public void setCount(int value) {
         // when v=2 then show rewarded ad
         v =+ value;
         SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(mContext);
@@ -27,7 +27,7 @@ public class PrefRewardedAd {
         editor.commit();
     }
 
-    public static int getCount() {
+    public int getCount() {
         SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(mContext);
         return preferences.getInt(KEY, 0);
     }
